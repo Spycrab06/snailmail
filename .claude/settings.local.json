@@ -18,7 +18,13 @@
       "Bash(git add:*)",
       "Bash(git commit -m \"$(cat <<''EOF''\nFix API URL configuration for Vercel deployment\n\n- Created centralized API_URL config that defaults to empty string (same domain) when VITE_API_URL is undefined\n- Updated all fetch calls to use API_URL from config instead of directly accessing import.meta.env.VITE_API_URL\n- This fixes the /undefined/login error on Vercel by allowing relative URLs when environment variable is not set\n- Files updated: LogInOrSignUp.jsx, SQLQueryPage.jsx, getCustomerData.js\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git push:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp list:*)",
+      "Bash(claude mcp inspect:*)",
+      "Bash(vercel link:*)",
+      "Bash(vercel env:*)",
+      "Bash(vercel --prod --token 64nifRNzJP9JgyLniDceSqlL --yes)"
     ],
     "deny": [],
     "ask": []

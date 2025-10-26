@@ -1,0 +1,25 @@
+Run these commands in your terminal to add Railway database credentials to Vercel:
+
+# First, make sure you're logged in to Vercel
+vercel login
+
+# Link to your project (if not already linked)
+vercel link
+
+# Add DB_HOST
+echo turntable.proxy.rlwy.net | vercel env add DB_HOST production preview development
+
+# Add DB_USER
+echo root | vercel env add DB_USER production preview development
+
+# Add DB_PASSWORD
+echo QiKmEvAEDvFpnrBzcWTNOmsCnGppkTrE | vercel env add DB_PASSWORD production preview development
+
+# Add DB_NAME
+echo railway | vercel env add DB_NAME production preview development
+
+# Add DB_PORT
+echo 56189 | vercel env add DB_PORT production preview development
+
+# Redeploy to apply changes
+vercel --prod
