@@ -1,0 +1,22 @@
+{
+  "name": "snailmail-database-tools",
+  "version": "1.0.0",
+  "description": "Database utilities for SnailMail",
+  "type": "module",
+  "scripts": {
+    "query": "node --env-file ../server/.env query-runner.js",
+    "interactive": "node --env-file ../server/.env interactive-cli.js",
+    "migrate": "node --env-file ../server/.env migrate.js",
+    "seed": "node --env-file ../server/.env seed.js",
+    "test-connection": "node --env-file ../server/.env test-connection.js",
+    "reset": "node --env-file ../server/.env reset-database.js",
+    "load-schema": "node --env-file ../server/.env load-schema.js"
+  },
+  "keywords": ["database", "mysql", "cli"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.15.3",
+    "readline": "^1.3.0"
+  }
+}

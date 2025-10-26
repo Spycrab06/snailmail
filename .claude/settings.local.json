@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --env-file ../server/.env verify-schema.js:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
