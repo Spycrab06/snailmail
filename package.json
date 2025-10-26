@@ -1,0 +1,36 @@
+{
+  "name": "snailmailvercel",
+  "version": "1.0.0",
+  "description": "SnailMail - Full stack application with React frontend and Node.js backend",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build:client": "cd client && npm run build",
+    "vercel-build": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdwardVNguyen/SnailMail.git"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "mysql",
+    "vite",
+    "fullstack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdwardVNguyen/SnailMail/issues"
+  },
+  "homepage": "https://github.com/EdwardVNguyen/SnailMail#readme",
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}

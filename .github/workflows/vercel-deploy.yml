@@ -1,0 +1,48 @@
+name: Vercel Deployment
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Install client dependencies
+        working-directory: ./client
+        run: npm install
+
+      - name: Install server dependencies
+        working-directory: ./server
+        run: npm install
+
+      - name: Lint client
+        working-directory: ./client
+        run: npm run lint
+
+      - name: Build client
+        working-directory: ./client
+        run: npm run build
+
+      - name: Build documentation
+        run: npm run docs:build
+
+  # Vercel will handle actual deployment automatically
+  # This workflow just validates builds
