@@ -6,7 +6,8 @@ import AuthInput from '../components/AuthInput';
 import AuthButton from '../components/AuthButton';
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../config/api';
 
 const LogInOrSignUp = ( {setAuth, setGlobalAccountType, setGlobalAuthId} ) => {
   const [mode, switchMode] = useState("Login"); 
@@ -36,7 +37,7 @@ const LogInOrSignUp = ( {setAuth, setGlobalAccountType, setGlobalAuthId} ) => {
     // checks at first page if email is already taken or not
     if (step === 1) {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/checkEmail`, {
+        const res = await fetch(`${API_URL}/checkEmail`, {
           method: "POST",
           headers: { "Content-Type": "application/json"},
           body: JSON.stringify( {email} )
@@ -68,7 +69,7 @@ const LogInOrSignUp = ( {setAuth, setGlobalAccountType, setGlobalAuthId} ) => {
   const handleSignUp = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/userSignUp`, {
+    const response = await fetch(`${API_URL}/userSignUp`, {
                                    method: 'POST',
                                    headers: {'Content-Type': 'application/json' },
                                    body: JSON.stringify( {email, password, phoneNumber, street, city, state, zipCode, firstName, middleName, lastName, accountType })
@@ -90,7 +91,7 @@ const LogInOrSignUp = ( {setAuth, setGlobalAccountType, setGlobalAuthId} ) => {
 
     // response - sends a POST request to server code, server code returns an JSON object {success: true/false message: 'message here'}
     // data - convert json code into javascript object
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
+    const response = await fetch(`${API_URL}/login`, {
                                    method: 'POST',
                                    headers: {'Content-Type': 'application/json' }, 
                                    body: JSON.stringify({ email, password })

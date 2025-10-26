@@ -1,6 +1,8 @@
+import { API_URL } from '../config/api';
+
 export const getCustomerData = async (auth_id) => {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/getCustomerData?authId=${auth_id}`);
+    const response = await fetch(`${API_URL}/getCustomerData?authId=${auth_id}`);
     const data = await response.json();
     return data;
   } catch (error) {

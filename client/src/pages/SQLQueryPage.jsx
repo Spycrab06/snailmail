@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './SQLQueryPage.css';
+import { API_URL } from '../config/api';
 
 const SQLQueryPage = () => {
   const [query, setQuery] = useState('');
@@ -33,7 +34,7 @@ JOIN address a ON c.address_id = a.address_id` },
     const startTime = Date.now();
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/executeQuery`, {
+      const response = await fetch(`${API_URL}/executeQuery`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query })
