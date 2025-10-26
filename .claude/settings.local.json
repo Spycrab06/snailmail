@@ -24,7 +24,9 @@
       "Bash(claude mcp inspect:*)",
       "Bash(vercel link:*)",
       "Bash(vercel env:*)",
-      "Bash(vercel --prod --token 64nifRNzJP9JgyLniDceSqlL --yes)"
+      "Bash(vercel --prod --token 64nifRNzJP9JgyLniDceSqlL --yes)",
+      "Bash(vercel inspect:*)",
+      "Bash(vercel logs:*)"
     ],
     "deny": [],
     "ask": []
