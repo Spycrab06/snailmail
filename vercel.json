@@ -30,12 +30,32 @@
       "dest": "/server/server.js"
     },
     {
+      "src": "/checkEmail",
+      "dest": "/server/server.js"
+    },
+    {
+      "src": "/userSignUp",
+      "dest": "/server/server.js"
+    },
+    {
+      "src": "/getCustomerData",
+      "dest": "/server/server.js"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "/server/server.js"
     },
     {
-      "src": "/(.*)",
+      "src": "/assets/(.*)",
+      "dest": "/client/assets/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|json|woff|woff2|ttf|eot))",
       "dest": "/client/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/index.html"
     }
   ],
   "env": {
