@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node --env-file ../server/.env verify-schema.js:*)"
+      "Bash(node --env-file ../server/.env verify-schema.js:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(PORT=8080 npm run dev:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm install)",
+      "Bash(npm run test-connection:*)",
+      "Bash(npm run query:*)",
+      "Bash(node:*)",
+      "Bash(npm run load-schema:*)"
     ],
     "deny": [],
     "ask": []

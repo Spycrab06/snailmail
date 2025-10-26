@@ -7,6 +7,7 @@ import LoginOrSignUp from './pages/LogInOrSignUp';
 import CustomerPage from './pages/CustomerPage';
 import EmployeePage from './pages/EmployeePage';
 import ManagerPage from './pages/ManagerPage';
+import SQLQueryPage from './pages/SQLQueryPage';
 
 import UserProfile from './pages/UserProfile';
 import UserShipping from './pages/UserShipping';
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/tracking" element={<Tracking/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/support" element={<Support/>} />
+          <Route path="/sql" element={<SQLQueryPage/>} />
 
           {/* login / signup page can set authentication status */}
           <Route path="/loginorsignup" 

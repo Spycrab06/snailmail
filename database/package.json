@@ -10,7 +10,8 @@
     "seed": "node --env-file ../server/.env seed.js",
     "test-connection": "node --env-file ../server/.env test-connection.js",
     "reset": "node --env-file ../server/.env reset-database.js",
-    "load-schema": "node --env-file ../server/.env load-schema.js"
+    "load-schema": "node --env-file ../server/.env load-schema.js",
+    "import": "node --env-file ../server/.env import-dump.js"
   },
   "keywords": ["database", "mysql", "cli"],
   "author": "",
